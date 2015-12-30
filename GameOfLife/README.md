@@ -1,0 +1,4 @@
+# Game Of Life
+We implemented a new algorithm to update the board. Instead of looping through the board and calculating the sum of the surrounding 8 cells for each cell, we only do the calculation for the live cells and the 8 cells around the live cells. Those dead cells which are distant from live ones will always remain dead. To avoid repeating calculation for the same cells, we also use a board to record if the cell is updated or not.
+Our original gol.c takes around 48 seconds for the speedtest.txt. The improved faster.c takes around 14 seconds.
+Later we applied the concept of parallel computing in the project, further improving the efficiency.
